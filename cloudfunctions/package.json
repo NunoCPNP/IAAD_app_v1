@@ -1,0 +1,13 @@
+{
+  "name": "cloudfunctions",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "functions-framework --target=appdata"
+  },
+  "dependencies": {
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.5.1"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "api-version": "v0.1",
+  "data-type": "dummy",
+  "data": [
+    {
+      "name": "",
+      "email": "",
+      "active": true,
+      "start-date": "",
+      "end-date": null,
+      "current-module": 2,
+      "modules-data": [
+        {
+          "module": 2,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 3,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 4,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 5,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 6,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 7,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 8,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        },
+        {
+          "module": 9,
+          "start": null,
+          "end": null,
+          "final-grade": null
+        }
+      ],
+      "notes": ""
+    }
+  ]
+}
