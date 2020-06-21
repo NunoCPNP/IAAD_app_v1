@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-import { white } from '../../styles/colors'
-
 const Menu = () => {
   return <Container></Container>
 }
@@ -16,5 +14,5 @@ const Container = styled('div')`
   width: 100vw;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.menu};
-  z-index: 10;
+  z-index: 5;
 `

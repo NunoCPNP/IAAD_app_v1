@@ -5,6 +5,8 @@ const GlobalStyle = () => {
   return (
     <Global
       styles={css`
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+
         *,
         *::after,
         *::before {

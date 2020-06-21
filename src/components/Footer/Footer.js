@@ -15,4 +15,5 @@ const Container = styled('div')`
   width: 100vw;
   height: 3rem;
   background-color: ${(props) => props.theme.colors.footer};
+  z-index: 10;
 `

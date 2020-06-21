@@ -27,6 +27,7 @@ const Container = styled('nav')`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  z-index: 10;
 
   img {
     height: 3.5rem;

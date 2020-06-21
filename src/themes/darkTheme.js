@@ -1,4 +1,4 @@
-import { darkBlue, darkRed, white } from '../styles/colors'
+import { darkBlue, lightBlue, darkRed, white } from '../styles/colors'
 
 export const darkTheme = {
   colors: {
@@ -6,7 +6,7 @@ export const darkTheme = {
     text: `${white}`,
     navigation: `${darkRed}`,
     footer: `${darkRed}`,
-    menu: `${darkBlue}`,
+    menu: `${lightBlue}`,
     burgericon: `${white}`,
   },
 }

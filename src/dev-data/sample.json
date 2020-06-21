@@ -1,15 +1,13 @@
 {
-  "api-version": "v0.1",
-  "data-type": "dummy",
   "data": [
     {
-      "name": "",
-      "email": "",
+      "name": "Nuno Pereira",
+      "email": "nunocpereira@outlook.com",
       "active": true,
-      "start-date": "",
-      "end-date": null,
-      "current-module": 2,
-      "modules-data": [
+      "startDate": "XXXXXX",
+      "endDate": null,
+      "currentModule": 2,
+      "modulesData": [
         {
           "module": 2,
           "start": null,
