@@ -1,48 +1,35 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import styled from '@emotion/styled'
 
-import { appControllersContext } from './context/appcontrollers/context'
-
+import List from './components/List/List'
 import Navigation from './components/Navigation/Navigation'
-import Loader from './components/Loader/Loader'
-import Footer from './components/Footer/Footer'
-import Students from './components/Students/Students'
-import Menu from './components/Menu/Menu'
 import NotFound from './components/NotFound/NotFound'
+import SideDrawer from './components/SideDrawer/SideDrawer'
+import Add from './components/Add/Add'
 
-import GlobalStyles from './styles/GlobalStyles'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 const App = () => {
-  const appcontrollers = useContext(appControllersContext)
-  const { state } = appcontrollers
-
   return (
     <>
+      <CssBaseline />
       <header>
         <Navigation />
       </header>
-      <Main>
+      <main>
         <section>
-          {state.loading && <Loader />}
-          {state.menu && <Menu />}
           <Switch>
-            <Route exact path="/" component={Students} />
+            <Route exact path="/" component={List} />
+            <Route exact path="/add" component={Add} />
             <Route path="/404" component={NotFound} />
             <Redirect to="/404" />
           </Switch>
         </section>
-      </Main>
-      <footer>
-        <Footer />
-      </footer>
-      <GlobalStyles />
+      </main>
+      <footer></footer>
+      <SideDrawer />
     </>
   )
 }
 
 export default App
-
-const Main = styled('main')`
-  background-color: ${(props) => props.theme.colors.background};
-`

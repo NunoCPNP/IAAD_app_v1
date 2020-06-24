@@ -1,7 +1,5 @@
 import React from 'react'
 
-const NotFound = () => {
-  return <></>
-}
+const NotFound = () => <></>
 
 export default NotFound

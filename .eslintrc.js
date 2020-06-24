@@ -12,10 +12,10 @@ module.exports = {
   },
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-uses-vars': [2],
-    'react/jsx-no-undef': 'error',
-    'no-console': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/jsx-uses-vars': 2,
+    'react/jsx-no-undef': 1,
+    'no-console': 2,
   },
   settings: {
     react: {

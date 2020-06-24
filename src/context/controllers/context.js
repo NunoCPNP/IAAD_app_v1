@@ -4,19 +4,18 @@ import PropTypes from 'prop-types'
 import { initialState } from './initialState'
 import { reducer } from './reducer'
 
-const appControllersContext = createContext(initialState)
-appControllersContext.displayName = 'Application Controllers'
+const controllersContext = createContext(initialState)
 
-const { Provider } = appControllersContext
+const { Provider } = controllersContext
 
-const AppControllersStateProvider = ({ children }) => {
+const ControllersStateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return <Provider value={{ state, dispatch }}>{children}</Provider>
 }
 
-AppControllersStateProvider.propTypes = {
+ControllersStateProvider.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export { appControllersContext, AppControllersStateProvider }
+export { controllersContext, ControllersStateProvider }

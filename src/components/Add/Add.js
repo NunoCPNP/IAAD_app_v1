@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Alerts = () => {
+const Add = () => {
   return <></>
 }
 
-export default Alerts
+export default Add

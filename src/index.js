@@ -1,24 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import { AppControllersStateProvider } from './context/appcontrollers/context'
+import { ControllersStateProvider } from './context/controllers/context'
 
 import App from './App'
 
-import { ThemeProvider } from 'emotion-theming'
-import { darkTheme } from './themes/darkTheme'
+import 'fontsource-roboto'
 
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppControllersStateProvider>
+    <ControllersStateProvider>
       <BrowserRouter>
-        <ThemeProvider theme={darkTheme}>
-          <App />
-        </ThemeProvider>
+        <App />
       </BrowserRouter>
-    </AppControllersStateProvider>
+    </ControllersStateProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )
