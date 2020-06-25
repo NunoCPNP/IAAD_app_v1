@@ -4,7 +4,7 @@ import React from 'react'
 import { daysBetweenDates } from '../../helpers/daysBetweenDates'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { red } from '@material-ui/core/colors'
+import { red, green } from '@material-ui/core/colors'
 
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
@@ -30,9 +30,13 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
-  orange: {
+  red: {
     color: theme.palette.getContrastText(red[900]),
     backgroundColor: red[900],
+  },
+  green: {
+    color: theme.palette.getContrastText(green[900]),
+    backgroundColor: green[900],
   },
 }))
 
@@ -44,7 +48,9 @@ const Student = ({ data }) => {
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
           <ListItem className={classes.root} style={{ padding: 0 }}>
-            <Avatar className={classes.orange}>{data.currentModule}</Avatar>
+            <Avatar className={daysBetweenDates(new Date(), data.startDate) < 90 ? classes.green : classes.red}>
+              {data.currentModule}
+            </Avatar>
             <ListItemText primary={data.name} secondary={data.email} />
           </ListItem>
         </ExpansionPanelSummary>
@@ -54,7 +60,6 @@ const Student = ({ data }) => {
               <FormControl fullWidth>
                 <InputLabel htmlFor="module-starting-date">Current module starting date</InputLabel>
                 <Input
-                  id="module-starting-date"
                   value={data.modulesData[data.modulesData.length - 1].startDate.slice(0, 10).replace(/-/g, ' - ')}
                   disabled
                   fullWidth
@@ -73,7 +78,6 @@ const Student = ({ data }) => {
               >
                 <InputLabel htmlFor="time-on-module">Days on current module</InputLabel>
                 <Input
-                  id="time-on-module"
                   value={daysBetweenDates(new Date(), data.startDate)}
                   disabled
                   fullWidth

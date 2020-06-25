@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import { controllersContext } from '../../context/controllers/context'
 
@@ -24,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const SideDrawer = () => {
-  const classes = useStyles(makeStyles)
   const { state, dispatch } = useContext(controllersContext)
+  const classes = useStyles(makeStyles)
+  const history = useHistory()
 
   return (
     <>
@@ -35,7 +37,7 @@ const SideDrawer = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Home" />
+            <ListItemText primary="Home" onClick={() => history.push('/')} />
           </ListItem>
         </List>
       </Drawer>

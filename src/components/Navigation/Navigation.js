@@ -35,7 +35,7 @@ const useStyles = makeStyles(() => ({
 const Navigation = () => {
   const { dispatch } = useContext(controllersContext)
   const classes = useStyles()
-  let history = useHistory()
+  const history = useHistory()
 
   const handleClick = () => {
     history.push('/add')
