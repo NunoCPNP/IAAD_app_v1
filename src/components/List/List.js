@@ -18,7 +18,7 @@ const List = () => {
 
   const getStudents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/v1/student')
+      const response = await axios.get('https://iaadapiv1.herokuapp.com/api/v1/student')
       const data = response.data.data
       setStudents(data)
     } catch (e) {

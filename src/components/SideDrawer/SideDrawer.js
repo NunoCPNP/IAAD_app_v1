@@ -10,7 +10,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 
-import InboxIcon from '@material-ui/icons/MoveToInbox'
+import HomeIcon from '@material-ui/icons/Home'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,9 +33,9 @@ const SideDrawer = () => {
         <List className={classes.list}>
           <ListItem button>
             <ListItemIcon>
-              <InboxIcon />
+              <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Test Label" />
+            <ListItemText primary="Home" />
           </ListItem>
         </List>
       </Drawer>

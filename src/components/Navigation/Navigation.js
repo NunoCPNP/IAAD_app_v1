@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import { controllersContext } from '../../context/controllers/context'
 
@@ -34,6 +35,11 @@ const useStyles = makeStyles(() => ({
 const Navigation = () => {
   const { dispatch } = useContext(controllersContext)
   const classes = useStyles()
+  let history = useHistory()
+
+  const handleClick = () => {
+    history.push('/add')
+  }
 
   return (
     <AppBar position="fixed" color="primary" className={classes.appBar}>
@@ -42,7 +48,7 @@ const Navigation = () => {
           <MenuIcon onClick={() => dispatch({ type: 'TOGGLE_MENU' })} />
         </IconButton>
         <Fab color="secondary" aria-label="add" className={classes.fabButton}>
-          <AddIcon />
+          <AddIcon onClick={() => handleClick()} />
         </Fab>
         <div className={classes.grow} />
         <IconButton color="inherit">
